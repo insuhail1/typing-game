@@ -1,3 +1,13 @@
+## Typing game
+
+#Test Url
+https://profound-macaron-45a3a5.netlify.app/
+
+#Screenshots
+
+![image](https://user-images.githubusercontent.com/46381543/179896290-04f45e7f-4311-4cfb-956e-a81b6faeb57f.png)
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
