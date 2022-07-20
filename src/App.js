@@ -97,7 +97,7 @@ function App() {
 
         <div className="card">
           <p className={` bold h1 ${cardColor}`}>
-            {finished && (success ? "SUCCESS" : "FAIL")}
+            {finished && (success ? "SUCCESS!" : "FAIL!")}
             {!finished && randomLetter}
           </p>
         </div>
