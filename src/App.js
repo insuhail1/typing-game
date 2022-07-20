@@ -120,7 +120,12 @@ function App() {
         )}
 
         <div className="input">
-          <input value={input} disabled={finished} onChange={onInputChange} />
+          <input
+            value={input}
+            placeholder="Type Here"
+            disabled={finished}
+            onChange={onInputChange}
+          />
           <button type="submit" disabled={startTimer} onClick={reset}>
             Clear
           </button>
