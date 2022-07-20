@@ -1,38 +1,108 @@
+:root {
+  --BACKGROUND: #0a1953;
+  --WHITE: #ffffff;
+  --SUCCESS: #068d32;
+  --ERROR: red;
+  --PINK: #f1406c;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: var(--BACKGROUND);
   display: flex;
+  grid-gap: 8px;
+  text-align: center;
+  padding: 20px;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100vh;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.card {
+  background-color: var(--WHITE);
+  border-radius: 8px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.timer {
+  width: 200px;
+}
+
+p {
+  width: 100%;
+  color: var(--WHITE);
+}
+p.default {
+  font-weight: 400;
+}
+p.medium {
+  font-weight: 500;
+}
+p.bold {
+  font-weight: 700;
+}
+
+.h1 {
+  font-size: 32px;
+  line-height: 45px;
+}
+.h2 {
+  font-size: 20px;
+  line-height: 28px;
+}
+.h3 {
+  font-size: 18px;
+  line-height: 26px;
+}
+.title {
+  font-size: 16px;
+  line-height: 24px;
+}
+.body {
+  font-size: 14px;
+  line-height: 24px;
+}
+.small {
+  font-size: 12px;
+  line-height: 16px;
+}
+.tiny {
+  font-size: 10px;
+  line-height: 14px;
+}
+.default {
+  color: var(--WHITE);
+}
+.error {
+  color: var(--ERROR);
+}
+.success {
+  color: var(--SUCCESS);
+}
+
+.input {
+  display: flex;
+  position: absolute;
+  align-self: auto;
+  top: 450px;
+  left: 0px;
+  height: 40px;
+  width: 100%;
+}
+
+.input input {
+  border: none;
+  flex-grow: 1;
+  padding-left: 10px;
+  padding-right: 10px;
+  outline: none;
+}
+
+.input button {
+  border: none;
+  background-color: var(--PINK);
+  padding-left: 16px;
+  padding-right: 16px;
+  color: var(--WHITE);
 }
