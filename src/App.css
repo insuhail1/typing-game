@@ -8,13 +8,20 @@
 
 .App {
   background-color: var(--BACKGROUND);
+
+  height: 100vh;
+  overflow: hidden;
+}
+.container {
+  max-width: 320px;
+  margin: auto;
+  position: relative;
+
   display: flex;
   grid-gap: 8px;
   text-align: center;
   padding: 20px;
   flex-direction: column;
-  height: 100vh;
-  overflow: hidden;
 }
 
 .card {

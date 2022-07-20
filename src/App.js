@@ -89,38 +89,42 @@ function App() {
 
   return (
     <div className="App">
-      <p className="bold h2">Type the alphabet</p>
-      <p className="h4">
-        Typing game to see how fast you type. Timer starts when you do :
-      </p>
-
-      <div className="card">
-        <p className={` bold h1 ${cardColor}`}>
-          {finished && (success ? "SUCCESS" : "FAIL")}
-          {!finished && randomLetter}
-        </p>
-      </div>
-      {!!startTimer && (
+      <div className="container">
+        <p className="bold h2">Type the alphabet</p>
         <p className="h4">
-          <span className="timer">Timer: </span>
-          <span className="timer">{`${formatTimeFromMs(currentTimer)}s`}</span>
+          Typing game to see how fast you type. Timer starts when you do :
         </p>
-      )}
-      {!!result && (
-        <p className="h4">
-          My {finished && success && "new high "}score:{" "}
-          {formatTimeFromMs(result)}
-        </p>
-      )}
-      {!success && !!highScore && (
-        <p className="h4">High score: {formatTimeFromMs(highScore)}</p>
-      )}
 
-      <div className="input">
-        <input value={input} disabled={finished} onChange={onInputChange} />
-        <button type="submit" disabled={startTimer} onClick={reset}>
-          Clear
-        </button>
+        <div className="card">
+          <p className={` bold h1 ${cardColor}`}>
+            {finished && (success ? "SUCCESS" : "FAIL")}
+            {!finished && randomLetter}
+          </p>
+        </div>
+        {!!startTimer && (
+          <p className="h4">
+            <span className="timer">Timer: </span>
+            <span className="timer">{`${formatTimeFromMs(
+              currentTimer
+            )}s`}</span>
+          </p>
+        )}
+        {!!result && (
+          <p className="h4">
+            My {finished && success && "new high "}score:{" "}
+            {formatTimeFromMs(result)}
+          </p>
+        )}
+        {!success && !!highScore && (
+          <p className="h4">High score: {formatTimeFromMs(highScore)}</p>
+        )}
+
+        <div className="input">
+          <input value={input} disabled={finished} onChange={onInputChange} />
+          <button type="submit" disabled={startTimer} onClick={reset}>
+            Clear
+          </button>
+        </div>
       </div>
     </div>
   );
