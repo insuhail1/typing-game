@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 
 import "App.css";
 
-const limit = 5;
+const limit = 20;
 
 function App() {
   const [count, setCount] = useState(0);
